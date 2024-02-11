@@ -166,6 +166,9 @@ class PlayList {
             return -1;
         }
         int min = this.tracks[start].getDuration();
+        if (start == size - 1) {
+            return size -1;
+        }
         for (int i = start + 1; i < size; i++) {
             if (this.tracks[i].getDuration() < min) {
                 min = this.tracks[i].getDuration();
